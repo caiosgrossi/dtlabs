@@ -122,7 +122,6 @@ def icp(source, target, max_iter=10, tol=1e-5):
         del indices, target_corr, centroid_src, centroid_target, src_centered, target_centered, H, U, S, Vt, R, t, ones, src_h
         torch.cuda.empty_cache()
     
-    print(T.shape)
     return T_total
 
 def translational_error(T_est, T_gt):
